@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+:root {
+  --hue-clicked: rgba(88, 54, 140, 1);
+}
+
+.logo a .logo-img {
+  width: 250px;
+  max-width: 35%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.body-auto {
+  width: 100% !important;
+  min-height: 160vh !important;
+  max-height: 200vh;
+}
+
+body.correct {
+  background-color: var(--hue-clicked);
+}
+
+body.wrong {
+  background-color: var(--hue-clicked);
+}
+
+.container {
+  width: 1200px;
+  max-width: 80%;
+  max-height: 95%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px 40px 40px 40px;
+  box-shadow: 0 0 10px 14px #E42B6F;
+  border: solid 15px rgba(88, 54, 140, 0.9);
+}
+
+.logo, .logo a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#question {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+#answer-buttons button {
+  width: 100%;
+  padding: 15px 20px;
+}
+
+#answer-buttons {
+  margin-top: 40px;
+}
+
+.btn {
+  background-color: var(--hue-neutral);
+  border: 5px solid rgba(88, 54, 140, 1);
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: rgba(88, 54, 140, 1);
+  outline: none;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: rgba(88, 54, 140, 1);
+  color: white;
+  cursor: pointer;
+  transition: 250ms ease;
+  transform: scale(1.03);
+}
+
+.btn#clicked, .btn.clicked {
+  background-color: var(--hue-clicked);
+  color: white;
+  border-color: var(--hue-clicked) !important;
+}
+
+.btn.wrong {
+  background-color: var(--hue-clicked);
+}
+
+.start-btn, .next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-container {
+  padding-top: 20px;
+}
+
+#score {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.hide {
+  display: none !important;
+}
+
+#results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spectrum, .mini-spectrum {
+  margin-top: 20px;
+  width: 600px;
+  height: 70px;
+  border-radius: 15px;
+  background: linear-gradient(0.25turn, #E42B6F, #0A3D99);
+}
+
+#breakdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  height: 92%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px 40px 40px 40px;
+  box-shadow: 0 0 10px 14px #E42B6F;
+  border: solid 15px rgba(88, 54, 140, 0.9);
+}
+
+#breakdown .main-result {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#breakdown .spectrum {
+  width: 90%;
+}
+
+#breakdown #arrow {
+  width: 20px;
+  padding-top: 5px;
+}
+
+#breakdown .mini-result-text {
+  margin: 0px;
+}
+
+#breakdown .mini-spectrum {
+  width: 400px;
+  height: 40px !important;
+  margin-top: 0px;
+}
+
+#breakdown .mini-arrow {
+  height: 30px;
+  width: auto;
+  padding: 5px 0px;
+}
+
+#breakdown h3 {
+  font-size: 10px;
+  margin-bottom: 0px;
+}
+
+.sub-groups {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.sub-group-1, .sub-group-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sub-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  padding-top: 10px;
+}
+
+#progressText {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+#progressBar {
+  width: 500px;
+  height: 25px;
+  border: 0.2rem solid #E42B6F;
+  margin-top: 0rem;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#progressBarFull {
+  height: 30px;
+  background: #E42B6F;
+  width: 2%;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+}
+
+.labels h4 {
+  font-weight: 500;
+}
+
+.disclaimers {
+  width: 90%;
+  margin: 0px auto 40px auto;
+}
